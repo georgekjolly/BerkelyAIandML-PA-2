@@ -57,14 +57,14 @@ These metrics indicate a good balance between model complexity and performance, 
 
 Through the use of polynomial features, we identified the following features as being significant in predicting car prices:
 
-Odometer (Mileage)
-Vehicle Type
-Year of Manufacture
-Manufacturer
-Model
-Drive Type
-Fuel Type
-Transmission Type
+Odometer (Mileage),
+Vehicle Type,
+Year of Manufacture,
+Manufacturer,
+Model,
+Drive Type,
+Fuel Type,
+Transmission Type,
 Region
 
 These features are crucial in understanding the price variations in used cars and can guide pricing strategies for dealers. A more detailed feature analysis, including feature selection and interaction terms, could further optimize model performance.

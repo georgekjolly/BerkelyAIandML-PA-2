@@ -1,6 +1,6 @@
 **Required Assignment 11.1: What Drives the Price of a Car?**
 
-Jupyter Note Book link :
+Jupyter Note Book link : https://github.com/georgekjolly/BerkelyAIandML-PA-2/blob/main/prompt_II.ipynb
 
 **Introduction**
 

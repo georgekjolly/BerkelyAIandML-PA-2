@@ -14,6 +14,10 @@ From the data analysis, several factors were identified as significant drivers o
 
 **Vehicle Type:** The type of vehicle (e.g., sedan, SUV, truck) affects pricing due to differences in consumer demand and market trends.
 
+**Model:** Specific vehicle models can have significantly different price trends based on brand reputation, reliability, performance, and consumer preference. Popular or well-rated models tend to retain value better.
+
+**Manufacturer:** The brand of the car plays a key role in pricing, as some manufacturers are known for reliability, luxury, or performance. Well-established brands with strong resale value typically command higher prices.
+
 **Year of Manufacture**: Newer vehicles are typically priced higher due to more advanced features, improved condition, and longer remaining lifespan.
 
 **Drive Type**: Cars with all-wheel drive (AWD), four-wheel drive (4WD), or front-wheel drive (FWD) may be priced differently depending on their utility in specific environments.
@@ -22,11 +26,12 @@ From the data analysis, several factors were identified as significant drivers o
 
 **Transmission Type:** Manual and automatic transmissions can influence price, with automatic generally commanding a premium in many markets.
 Region: The geographical location of the car plays a significant role in pricing, as demand can vary by area.
-Model Overview
+
+**Model Overview**
 
 Two key models were employed to predict used car prices:
 
-**Ridge Regression:** This model performed well in predicting the price, utilizing polynomial transformations of the features to capture non-linear relationships in the data. The optimal Ridge model had a polynomial degree of 4 and an alpha of 100.
+**Ridge Regression:** This model performed well in predicting the price, utilizing polynomial transformations of the features to capture non-linear relationships in the data. The optimal Ridge model had a polynomial degree of 5 and an alpha of 1000.
 
 **Linear Regression:** A simpler approach was also employed, using linear regression with the same polynomial degree and yielding similar results to Ridge regression. This suggests that a linear model is sufficiently capturing the relationship between the features and price, but regularization in Ridge helped avoid overfitting.
 
@@ -34,12 +39,18 @@ Both models performed reasonably well, with the Ridge regression providing a sli
 
 **Performance Evaluation**
 
-**Best Model:** The Ridge Regression model with a polynomial degree of 4 and an alpha of 100 provided the most accurate predictions for both the training and test datasets.
-Key Performance Metrics:
-R² (Train): 0.698
-R² (Test): 0.624
-Train MSE: 70,365,331
-Test MSE: 88,714,756
+**Best Model:** The Ridge Regression model with a polynomial degree of 5 and an alpha of 1000 provided the most accurate predictions for both the training and test datasets.
+
+**Key Performance Metrics:**
+
+R² (Train): 0.7131
+
+R² (Test): 0.6575
+
+Train MSE: 66,797,167
+
+Test MSE: 83,609,049
+
 These metrics indicate a good balance between model complexity and performance, with a decent fit on both training and testing data.
 
 **Feature Importance**
@@ -47,11 +58,21 @@ These metrics indicate a good balance between model complexity and performance, 
 Through the use of polynomial features, we identified the following features as being significant in predicting car prices:
 
 Odometer (Mileage)
+
 Vehicle Type
+
 Year of Manufacture
+
+Manufacturer
+
+Model
+
 Drive Type
+
 Fuel Type
+
 Transmission Type
+
 Region
 
 These features are crucial in understanding the price variations in used cars and can guide pricing strategies for dealers. A more detailed feature analysis, including feature selection and interaction terms, could further optimize model performance.
